@@ -1,48 +1,63 @@
-# Uniswap
+# Uniswap Implementation (C++)
+## PoolStatus Struct and Functions
++ PoolStatus Struct
+  + Defines the data structure for pool status, including the amounts of X and Y tokens in the pool.
 
-PoolStatus Struct: Defines the data structure for pool status, including the amounts of X and Y tokens in the pool.
++ addLiquidity Function
+  + Adds liquidity to a pool by increasing the amounts of X and Y tokens.
 
-addLiquidity Function: Adds liquidity to a pool by increasing the amounts of X and Y tokens.
++ removeLiquidity Function
+  + Removes liquidity from a pool by decreasing the amounts of X and Y tokens based on a given percentage.
 
-removeLiquidity Function: Removes liquidity from a pool by decreasing the amounts of X and Y tokens based on a given percentage.
++ swapTokens Function
+  + Swaps tokens between two pools. It takes an amount of tokens to be swapped from one pool to another and returns the output amount received.
 
-swapTokens Function: Swaps tokens between two pools. It takes an amount of tokens to be swapped from one pool to another and returns the output amount received.
++ calculateArbitrageProfit Function
+  + Calculates the potential profit from an arbitrage transaction between two pools.
 
-calculateArbitrageProfit Function: Calculates the potential profit from an arbitrage transaction between two pools.
++ Main Function
+  + Demonstrates the usage of the above functions by creating two pools, adding liquidity, performing a token swap, and calculating the arbitrage profit.
 
-Main Function: Demonstrates the usage of the above functions by creating two pools, adding liquidity, performing a token swap, and calculating the arbitrage profit.
+## How to run
 
-# How to run
+1. Save the code provided in a file with a .cpp extension, such as uniswap.cpp.
 
--Save the code provided in a file with a .cpp extension, such as uniswap.cpp.
+2. Ensure that you have a C++ compiler installed on your system.
 
--Ensure that you have a C++ compiler installed on your system.
+3. Open a terminal or command prompt and navigate to the directory where the uniswap.cpp file is located.
 
--Open a terminal or command prompt and navigate to the directory where the uniswap.cpp file is located.
+4. Compile the code using the C++ compiler by running the following command:
 
--Compile the code using the C++ compiler by running the following command:
-
-`g++ -o uniswap uniswap.cpp`
+   `g++ -o uniswap uniswap.cpp`
 
     This will generate an executable file named uniswap in the current directory.
 
--Run the compiled program by executing the following command:
+5. Run the compiled program by executing the following command:
 
-`./uniswap`
+   `./uniswap`
 
     The program will then be executed, and you will see the output on the terminal.
 
-# Uniswap Code
+## Test Cases 
+Test cases to stimulate user's swap transaction (e.g. Swap 100 DAI to ETH) and benchmark non-blocking calculation.
+
+The following is the test result:
+```
+Pool A: X = 100, Y = 10
+Pool B: X = 200, Y = 20
+
+result:
+Pool A: X = 140, Y = 15.7976
+Pool B: X = 310, Y = 29.2024
+
+Output amount: 0.8
+
+Arbitrage profit: 0.0006
+```
+## Uniswap Code
 
     This repository contains the code for performing liquidity addition, removal, token swapping, and calculating arbitrage profit using Uniswap algorithm.
 
 ## Prerequisites
 
 - C++ compiler (GCC recommended)
-
-## Getting Started
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/silverspoon19931120/uniswap.git
