@@ -61,3 +61,14 @@ Arbitrage profit: 0.0006
 ## Prerequisites
 
 - C++ compiler (GCC recommended)
+
+## Author
+Haixiang YAN  
++65 91319481  
+hxyan.2015@gmail.com
+
+## Version History
++ v0.1
+  + Initial Release
++ v0.2
+  + Various bug fixes and optimizations
